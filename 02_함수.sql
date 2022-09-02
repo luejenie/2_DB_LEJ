@@ -138,7 +138,6 @@ SELECT FLOOR(-123.5), TRUNC(-123.5) FROM DUAL;
 -- SYSDATE : 시스템에 현재 시간(년,월,일,시,분,초)을 반환
 SELECT SYSDATE FROM DUAL;
 
--- SYSTIMESTAMP : SYSDATE + MS 단위 추가
 SELECT SYSTIMESTAMP FROM DUAL;
 -- TIMESTAMP : 특정 시간을 나타내거나 기록하기 위한 문자열     __ +0900 시차
 
