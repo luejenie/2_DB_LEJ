@@ -259,7 +259,7 @@ SELECT '2022-09-02' FROM DUAL;   -- 탭에 ABC 써있음(문자형)
 SELECT 20220902 FROM DAUL;       -- 탭에 123(숫자형)
 
 SELECT TO_DATE('2022-09-02') FROM DUAL;   -- 탭에 시계모양(날짜형)
-SELECT T0_DATE(20220902) FROM DUAL;	  -- 탭에 시계모양(날짜형)
+SELECT TO_DATE(20220902) FROM DUAL;	  -- 탭에 시계모양(날짜형)
 
 SELECT TO_DATE('220901 113255', 'YYMMDD HH24MISS') FROM DUAL;
 --  ORA-01861: 리터럴이 형식 문자열과 일치하지 않음
@@ -279,7 +279,7 @@ FROM EMPLOYEE;
 SELECT TO_DATE('510505', 'YYMMDD') FROM DUAL;  -- 2051-05-05 00:00:00.000
 SELECT TO_DATE('510505', 'RRMMDD') FROM DUAL;  -- 1951-05-05 00:00:00.000
 
-
+-- TO_DATE 기본값 RR
 
 ---------------------------------------------------------------------------------
 
