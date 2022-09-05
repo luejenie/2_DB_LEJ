@@ -14,6 +14,7 @@ SELECT DEPARTMENT_NAME || '의 정원은 ' || CAPACITY || '명 입니다.'
 FROM TB_DEPARTMENT;
 
 
+
 --3."국어국문학과"에 다니는 여학생 중 현재 휴학중인 여학생을 찾아달라는 요청이 들어왔다. 
 --   누구인가? (국문학과의 '학과코드'는 학과 테이블(TB_DEPARTMEBT)을 조회)
 SELECT STUDENT_NAME
