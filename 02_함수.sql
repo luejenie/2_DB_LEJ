@@ -430,8 +430,7 @@ WHERE SALARY = (SELECT MAX(SALARY) FROM EMPLOYEE);
 -- COUNT([DISTINCT] 컬럼명) : 중복을 제거한 행 개수를 헤아려서 리턴
 -- COUNT(*) : NULL을 포함한 전체 행 개수를 리턴
 -- COUNT(컬럼명) : NULL을 제외한 실제 값이 기록된 행 개수를 리턴함
-
-SELECT COUT(*) FROM EMPLOYEE e ;  --EMPLOYEE 테이블의 행의 개수
+SELECT COUNT(*) FROM EMPLOYEE e ;  --EMPLOYEE 테이블의 행의 개수
 
 
 -- BONUS를 받는 사원의 수
