@@ -74,7 +74,7 @@ WHERE EXTRACT(YEAR FROM ENTRANCE_DATE)
 
 SELECT STUDENT_NO, STUDENT_NAME 
 FROM TB_STUDENT
-WHERE (EXTRACT(YEAR FROM ENTRANCE_DATE) - ( 19 || SUBSTR(STUDENT_SSN, 1, 2))) > 19;
+WHERE EXTRACT(YEAR FROM ENTRANCE_DATE - ( 19 || SUBSTR(STUDENT_SSN, 1, 2))) > 19;
 
 -- 입학년도-태어난 연도 = 20 / 재수생
 
@@ -178,6 +178,9 @@ ORDER BY DEPARTMENT_NO;
 -- COUNT(컬럼명) : NULL을 제외한 값의 개수
 
 
+
+
+
 -- 14. 춘 대학교에 다니는 동명이인(同名異人) 학생들의 이름을 찾고자 한다. 
 --    어떤 SQL문장을 사용하면 가능하겠는가? 
 SELECT STUDENT_NAME 동일이름, COUNT(*) "동명인 수"
@@ -201,10 +204,9 @@ GROUP BY ROLLUP(SUBSTR(TERM_NO, 1, 4), SUBSTR(TERM_NO, 5, 2) )
 ORDER BY SUBSTR(TERM_NO, 1, 4), SUBSTR(TERM_NO, 5, 2);
 --> ORDER BY절에 함수 작성 가능!
 
--- NULL -> 빈칸으로 할때, NVL 사용해서 ' '(한 칸 띄고!)
+-- NULL -> 빈칸으로 만들 때, NVL 사용해서 ' '(한 칸 띄고!)
 -- -> 빈칸의 우선순위가 높아서 빈칸이 위로 감.
 -- ORDER BY절에 SUBSTR 구문을 쓰면 NULL이 그대로 인식되고, NULL은 우선순위 최하위.
-
 
 
 
