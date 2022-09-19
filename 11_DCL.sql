@@ -4,7 +4,7 @@
 	DCL(Data Control Language) : 데이터를 다루기 위한 권한을 다루는 언어    //데이터 제어 언어
 	
 	- 계정에 DB, DB 객체에 대한 접근 권한을 
-	  부여(GRANT)하고 회수(REVOKD)하는 언어
+	  부여(GRANT)하고 회수(REVOKE)하는 언어
 	  
 	* 권한의 종류
 
