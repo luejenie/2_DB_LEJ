@@ -12,7 +12,7 @@ SELECT * FROM USER_TABLES;
 
 --------------------------------------------------------------------------------------------------------------------
 -- DQL(Data Query Language) : 데이터 질의(조회) 언어
--- DML(Data Mainpulation Language) : 데이터 조작 언어. 테이블에 데이터를 삽입, 수정, 삭제하는 언어
+-- DML(Data Manipulation Language) : 데이터 조작 언어. 테이블에 데이터를 삽입, 수정, 삭제하는 언어
 -- TCL(Transation Control Language) : 트랜젝션 제어 언어. DML 수행 내용을 COMMIT, ROLLBACK 하는 언어
 
 -- DDL(DATA DEFINITION LANGUAGE) : 데이터 정의 언어
@@ -675,31 +675,6 @@ VALUES(2, 'user02', 'pass02', '홍길동', '남자', '010-1234-5678', 'hong123@k
 --         STATUS(탈퇴여부) - NOT NULL(NN_STATUS), 'Y' 혹은 'N'으로 입력(CK_STATUS)
 -- 각 컬럼의 제약조건에 이름 부여할 것
 -- 5명 이상 INSERT할 것
-
-CREATE TABLE USER_TEST(
-	USER_NO NUMBER CONSTRAINT PK_USER_TEST PRIMARY KEY,
-	USER_ID VARCHAR2(20) CONSTRAINT UK_USED_ID UNIQUE,
-	USER_PWD VARCHAR2(20) CONSTRAINT NN_USER_PWD NOT NULL,
-	PNO VARCHAR2(20) CONSTRAINT NN_PNO NOT NULL,
-	GENDER VARCHAR2(3) CONSTRAINT CK_GENDER CHECK( GENDER IN ('남', '여'))
-	PHONE VARCHAR2(20),
-	ADDRESS VARCHAR2(100),
-	STATUS VARCHAR2(3) DEFAULT 'N' CONSTRAINT NN_STATUS NOT NULL,
-	CONSTRAINT UK_PNO UNIQUE(PNO),
-)
-
-COMMENT ON COLUMN USER_TEST.USET_ID IS '회원번호';
-COMMENT ON COLUMN USER_TEST.USET_ID IS '회원아이디';
-COMMENT ON COLUMN USER_TEST.USET_PWD IS '비밀번호';
-COMMENT ON COLUMN USER_TEST.PNO IS '주민등록번호';
-COMMENT ON COLUMN USER_TEST.GENDER IS '성별';
-COMMENT ON COLUMN USER_TEST.PHONE IS '연락처';
-COMMENT ON COLUMN USER_TEST.ADDRESS IS '주소';
-COMMENT ON COLUMN USER_TEST.STATUS IS '탈퇴여부';
-
--- 다시
-
-
 
 
 CREATE TABLE USER_TEST(
